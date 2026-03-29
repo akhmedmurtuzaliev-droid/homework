@@ -1,0 +1,42 @@
+html {
+	font-family: sans-serif;
+}
+body {
+	box-sizing: border-box;
+}
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.conteiner {
+	max-width: 1320px;
+	padding: 0 15px;
+	margin: 0 auto;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.392);
+	flex-wrap: wrap;
+}
+.header-container {
+	display: inline;
+	display: flex;
+	justify-content: space-between;
+}
+.block {
+	background-color: black;
+	width: 45px;
+	height: 45px;
+	margin: 17px 5px;
+}
+.nomer {
+	color: black;
+	margin: 27px 5px;
+	text-decoration: none;
+}
+.spisok {
+	display: flex;
+	gap: 20px;
+	margin-top: 27px;
+	flex-wrap: wrap;
+	text-decoration-line: underline;
+}
