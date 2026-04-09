@@ -1,0 +1,90 @@
+html {
+	font-family: Ubuntu, sans-serif;
+	font-weight: 400;
+}
+a {
+	text-decoration: none;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+.container {
+	max-width: 1250px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.text {
+	font-family: "Ubuntu", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 130%;
+	margin-bottom: 140px;
+}
+.title-medium {
+	font-family: oswald, sans-serif;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 115%;
+	text-transform: uppercase;
+	color: #2c332f;
+}
+.section {
+	margin-bottom: 140px;
+}
+.button-hero {
+	display: inline-block;
+	padding: 19px 32px;
+	background-color: #3596ed;
+	width: 270px;
+	height: 57px;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 130%;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+	text-align: center;
+	color: #fff;
+	transition:
+		color 0.3s,
+		background-color 0.4s;
+}
+.button:not(:disabled):active {
+	background-color: #247cc9;
+}
+button.button:disabled {
+	opacity: 0.65;
+	cursor: default;
+}
+.button:hover {
+	opacity: 0.85;
+}
+.button:active {
+	background-color: #1570bf;
+}
+
+a,
+button {
+	outline: none;
+}
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+	outline: 2px solid #3596ed;
+	outline-offset: 2px;
+}
