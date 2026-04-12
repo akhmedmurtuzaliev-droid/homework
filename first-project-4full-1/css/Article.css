@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .article {
 	padding-top: 80px;
 	padding-bottom: 120px;
@@ -19,20 +26,25 @@
 	line-height: 130%;
 	color: #535755;
 }
-.img {
-	width: 100%;
-}
 .article-mb {
 	margin-top: 0px;
 	margin-bottom: 80px;
 }
 .article-mb::before {
-	right: -350px;
+	right: 0;
 	top: 300px;
 }
-
+.article-mb-1 {
+	margin-bottom: 0;
+}
 .article-wraper {
 	position: relative;
+	-webkit-transition:
+		opacity 0.3s,
+		background-color 0.3s;
+	-o-transition:
+		opacity 0.3s,
+		background-color 0.3s;
 	transition:
 		opacity 0.3s,
 		background-color 0.3s;
@@ -45,20 +57,15 @@
 }
 .icon {
 	position: absolute;
-	left: 580px;
-	top: 226px;
-	transform: translate(-10%, -10%);
+	left: 50%;
+	top: 45%;
+	-webkit-transform: translate(-80%, -80%);
+	-ms-transform: translate(-80%, -80%);
+	transform: translate(-80%, -80%);
 }
-.article-wraper::before {
-	content: "";
-	background: url(../img/decoration.svg);
-	position: absolute;
-	z-index: -1;
-	width: 528px;
-	height: 48px;
-}
+
 .article-wraper-1::before {
-	left: -350px;
+	left: 0;
 	top: 100px;
 }
 .wraper-img-2 {
@@ -114,4 +121,42 @@ li::marker {
 	font-size: 16px;
 	line-height: 130%;
 	color: #535755;
+}
+
+@media (width <= 768px) {
+	.article-wraper-1::before,
+	.article-mb::before {
+		display: none;
+	}
+	.article-mb {
+		margin-bottom: 60px;
+	}
+	.article-title-2 {
+		font-size: 32px;
+	}
+	.mb-video {
+		margin-bottom: 0px;
+	}
+	.article {
+		padding: 55px 0 55px 0;
+	}
+}
+@media (width <= 576px) {
+	.article {
+		padding-top: 60px;
+		padding-bottom: 80px;
+	}
+	.article-title {
+		font-size: 38px;
+	}
+	.mb-video {
+		margin-bottom: 0px;
+	}
+	.article {
+		padding: 45px 0 45px 0;
+	}
+	.icon {
+		width: 45px;
+		height: 45px;
+	}
 }

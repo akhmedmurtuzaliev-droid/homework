@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 html {
 	font-family: Ubuntu, sans-serif;
 	font-weight: 400;
@@ -6,13 +13,20 @@ a {
 	text-decoration: none;
 }
 body {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
 	flex-direction: column;
+	min-width: 375px;
 	min-height: 100vh;
 }
 *,
 *::before,
 *::after {
+	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
 h1,
@@ -23,6 +37,12 @@ h5,
 h6,
 p {
 	margin: 0;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 .container {
 	max-width: 1250px;
@@ -47,6 +67,14 @@ p {
 .section {
 	margin-bottom: 140px;
 }
+.decor::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	width: calc(50% - 250px);
+	height: 48px;
+	background: url(../img/decor-icon.svg) repeat-x;
+}
 .button-hero {
 	display: inline-block;
 	padding: 19px 32px;
@@ -60,6 +88,12 @@ p {
 	text-transform: uppercase;
 	text-align: center;
 	color: #fff;
+	-webkit-transition:
+		color 0.3s,
+		background-color 0.4s;
+	-o-transition:
+		color 0.3s,
+		background-color 0.4s;
 	transition:
 		color 0.3s,
 		background-color 0.4s;
@@ -87,4 +121,26 @@ button:focus-visible,
 summary:focus-visible {
 	outline: 2px solid #3596ed;
 	outline-offset: 2px;
+}
+
+@media (width <= 992px) {
+	.container {
+		max-width: 768px;
+	}
+}
+@media (width <= 768px) {
+	.container {
+		max-width: 576px;
+	}
+	.title-medium {
+		font-size: 22px;
+	}
+}
+@media (width <= 576px) {
+	.section {
+		margin-bottom: 80px;
+	}
+	.title-medium {
+		font-size: 18px;
+	}
 }
