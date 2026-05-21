@@ -1,0 +1,40 @@
+:root{
+      /* font-family */
+      --font-family: "Gotham Pro", sans-serif;
+      --second-family: "Montserrat", sans-serif;
+      --third-family: "Latin CT", sans-serif;
+      --font3: "Roboto", sans-serif;
+      --font4: "Bahnschrift", sans-serif;
+
+      
+      /* color */
+      --white-color: #fff;
+      --black-color: #000;
+      --main-color: #d9d9d9;
+      --bg-color: #0e0e12;
+      --border-color: #CE6933;
+
+      --button-sgadow:inset 0 -4px 0 0 #8f4119, 0 3px 49px -3px rgba(226, 128, 72, 0.76);
+      --button-color:linear-gradient(57deg, #dc6b30 0%, #e4864f 42.19%, #ffbe82 72.92%, #e49031 100%);
+      --bg-gradient:radial-gradient(3992.22% 112.45% at 8.04%  17.65%, rgb(231, 170, 25) 0%, rgb(203, 109, 156) 100%);
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /* container */
+      --container-width: 1571px;
+      --container-padding: 15px;
+
+
+
+
+}
