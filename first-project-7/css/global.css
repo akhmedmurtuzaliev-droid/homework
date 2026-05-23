@@ -1,0 +1,16 @@
+.page{
+      font-family: var(--font-family);
+      font-weight: 400;
+      color: var(--white-color);
+
+}
+.page__body{
+      min-width: 375px;
+      background-color: var(--bg-color);
+}
+
+.container{
+      max-width: var(--container-width);
+      padding: var(--container-padding);
+      margin-inline: auto;
+}
