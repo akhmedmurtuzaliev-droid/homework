@@ -44,7 +44,7 @@ switch (login) {
 const PASSWORD = "123456";
 const password = +prompt("введите пароль", 0);
 
-switch (PASSWORD){
+switch (password){
       case PASSWORD:
             console.log("Доступ разрешен");
             break;
