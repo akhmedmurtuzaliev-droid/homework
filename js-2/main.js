@@ -42,7 +42,7 @@ switch (login) {
 }
                   
 const PASSWORD = "123456";
-const password = +prompt("введите пароль", 0);
+const password = prompt("введите пароль", 0);
 
 switch (password){
       case PASSWORD:
