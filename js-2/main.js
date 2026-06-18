@@ -1,5 +1,5 @@
 // // Задание 1
-const number = prompt("введите число", 0);
+const number = +prompt("введите число", 0);
 if (number % 2 === 0) {
       alert("число четное")
 } else {
@@ -7,7 +7,7 @@ if (number % 2 === 0) {
 }
 
 // Задание 2
-const age = prompt("Введите ваш возраст", 0);
+const age = +prompt("Введите ваш возраст", 0);
 const discount = age < 18 ? 10 : age <= 65 ? 20 : 30;
 console.log(`Ваша скидка ${discount}%`);
 
@@ -41,7 +41,7 @@ if ((username === "admin" || username === "user") && password === "123456") {
 }
 
 // Задание 4
-const weight = +promt("Введите вес посылки (в кг):");
+const weight = +prompt("Введите вес посылки (в кг):");
 
 if (weight <= 0 || isNaN(weight)) {
       alert("некорректный вес посылки");
