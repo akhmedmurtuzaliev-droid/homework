@@ -1,0 +1,254 @@
+.header {
+	padding-top: 64px;
+	padding-bottom: 50px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: var(--layer-2);
+	padding-block: 32px;
+	background-color: var(--bg-color);
+	-webkit-transition: -webkit-box-shadow var(--transition-time);
+	transition: -webkit-box-shadow var(--transition-time);
+	-o-transition: box-shadow var(--transition-time);
+	transition: box-shadow var(--transition-time);
+	transition:
+		box-shadow var(--transition-time),
+		-webkit-box-shadow var(--transition-time);
+}
+
+.page-body--no-scroll {
+	overflow-y: hidden;
+}
+
+.header--menu-open {
+	background-color: var(--bg-menu-overlay);
+	width: 100%;
+	inset: 0;
+	position: fixed;
+	height: 100%;
+	z-index: var(--layer-4);
+}
+
+.header--fixed {
+	-webkit-box-shadow: 0 0 20px var(--shadow-button-accent);
+	box-shadow: var(--shadow-green);
+	overflow-y: hidden;
+}
+
+.header__inner {
+	display: flex;
+	max-width: 1240px;
+	align-items: center;
+	justify-content: space-between;
+	padding-inline: 15px;
+	min-height: 48px;
+}
+
+.logo {
+	display: inline-flex;
+	align-items: center;
+	gap: 5px;
+	transform: translateY(-5px);
+	flex-shrink: 0;
+}
+
+.logo__title {
+	font-family: var(--third-family);
+	font-weight: 400;
+	line-height: 119%;
+	font-size: 12px;
+	letter-spacing: 0.03em;
+	color: var(--main-color);
+	max-width: 108px;
+	transform: translateY(6px);
+	/* margin-right: clamp(0.938rem, 0.531rem + 1.73vw, 1.875rem); */
+}
+
+.lang__wrap {
+	display: flex;
+	align-items: center;
+	gap: 2px;
+}
+
+.lang__switch {
+	display: inline-flex;
+	align-items: center;
+	gap: 3px;
+	margin-right: 15px;
+}
+
+.header__nav {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+}
+
+.lang__select {
+	border: none;
+	background-color: var(--bg-color);
+	font-size: 18px;
+	font-weight: 400;
+	color: var(--main-color);
+	appearance: none;
+	/* margin-right: clamp(1.688rem, 0.875rem + 3.47vw, 3.563rem); */
+	cursor: pointer;
+}
+
+.lang__form::after {
+	content: "";
+	display: inline-block;
+	background: url("../../icons/arrow-down.svg");
+	width: 22px;
+	height: 22px;
+	transform: translateY(4px);
+}
+
+form:focus-within::after {
+	transform: rotate(180deg);
+}
+
+.header__buttons {
+	display: flex;
+	align-items: center;
+}
+
+.btn-dark {
+	padding: 16px 23px;
+}
+
+.btn-accent {
+	padding: 20px 30px;
+}
+
+@media (width <= 576px) {
+	.header {
+		padding-bottom: 11px;
+	}
+}
+
+@media (width <= 576px) {
+	.header__inner {
+		padding-inline: 0px;
+	}
+}
+
+@media (width <= 992px) {
+	.logo__link {
+		width: 38px;
+		height: 50px;
+	}
+
+	.logo__title {
+		font-size: 10px;
+	}
+}
+
+@media (width <= 576px) {
+	.logo__title {
+		font-size: 9px;
+	}
+}
+
+@media (width <= 992px) {
+	.nav__menu,
+	.lang__wrap {
+		position: fixed;
+		top: 0;
+		left: -100vw;
+		bottom: 0;
+		background-color: var(--bg-burger-menu);
+		width: 250px;
+		z-index: var(--layer-2);
+		padding: 150px 15px;
+		box-shadow: var(--shadow-green);
+		opacity: 0;
+		visibility: hidden;
+		transition:
+			right var(--transition-time),
+			left var(--transition-time),
+			opacity var(--transition-time),
+			visibility var(--transition-time);
+	}
+
+	.nav__menu--open {
+		left: 0;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	/* .lang__flag {
+		display: none;
+	} */
+
+	.lang__form {
+		left: 43px;
+		top: 289px;
+		z-index: var(--layer-2);
+		/* display: none; */
+	}
+
+	.lang__select {
+		background-color: var(--bg-burger-menu);
+		margin-right: 0;
+	}
+
+	.header__nav .nav__list {
+		flex-direction: column;
+		align-items: start;
+		text-align: start;
+	}
+
+	.lang__switch {
+		display: flex;
+		padding-top: 15px;
+		align-items: center;
+		gap: 5px;
+	}
+}
+
+@media (width <= 1060px) {
+	.lang__select {
+		margin-right: 2px;
+	}
+}
+
+@media (width > 992px) {
+	.nav__menu {
+		flex-grow: 1;
+		display: flex;
+		flex-direction: row-reverse;
+	}
+}
+
+@media (width > 992px) {
+	.header__buttons {
+		gap: 8px;
+	}
+}
+
+@media (width <= 1064px) {
+	.header__buttons {
+		gap: 6px;
+	}
+}
+
+@media (width <= 992px) {
+	.header__buttons {
+		gap: 5px;
+	}
+}
+
+@media (width <= 1033px) {
+	.btn-dark {
+		font-size: 14px;
+		padding: 12px 19px;
+	}
+}
+
+@media (width <= 1033px) {
+	.btn-accent {
+		font-size: 14px;
+		padding: 16px 20px;
+	}
+}
